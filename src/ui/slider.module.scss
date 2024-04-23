@@ -1,0 +1,75 @@
+
+@mixin uiSliderInput {
+  position:relative;
+  width:100%;
+  min-width: 100px;
+  height: 18px;
+  margin:0px;
+  background-color: transparent;
+  /* reset */
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+@mixin uiSliderThumb {
+  width: 1px;
+  height: 10px;
+  background: rgba(0,0,0,0);
+
+}
+
+.uiSlider {
+  position:relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  background: rgba(255,255,255,0.6);
+  border-radius: 2px;
+  label {
+    display: inline-block;
+    font-size: 7px;
+    font-weight: 500;
+    text-transform: uppercase;
+    max-width: 100px;
+    position: absolute;
+    z-index: 1;
+    padding: 0px 3px;
+    pointer-events: none;
+    color:#000;
+    text-shadow: 0px 1px rgba(255,255,255,0.3);
+  }
+  input[type="range"] {
+    @include uiSliderInput;
+    &::-webkit-slider-thumb {
+      @include uiSliderThumb;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    &::-moz-range-thumb {
+      @include uiSliderThumb;
+    }
+  }
+  .uiSliderValue {
+    position: absolute;
+    right: 3px;
+    pointer-events: none;
+    font-size: 9px;
+    font-weight: 300;
+    color: #000;
+    z-index: 1;
+  }
+}
+.uiSliderThumbReplacement {
+  --width: 0%;
+  position: absolute;
+  top: 1px;
+  bottom:1px;
+  left: 1px;
+  width:calc(var(--width) - 2px);
+  margin: 0;
+  background: rgba(255,0,0,0.6);
+  pointer-events: none;
+  transition: width 0.05s ease-in-out;
+  border-radius: 0px;
+}

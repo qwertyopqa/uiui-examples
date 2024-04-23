@@ -1,0 +1,111 @@
+[{
+  "type" : "panel",
+  "label": "Global",
+  "settings": {
+    "flow": "vertical"
+  },
+  "value": [
+    {
+      "label": "Slider1",
+      "type": "slider",
+      "settings": {
+        "min":0,
+        "max":1,
+        "step":0.01
+      },
+      "value": 0.5
+    },{
+      "label": "Slider2",
+      "type": "slider",
+      "settings": {
+        "min":0,
+        "max":2,
+        "step":0.01
+      },
+      "value": 1.5
+    },{
+      "type": "panel",
+      "label": "Inner Panel",
+      "settings": {
+        "flow": "vertical"
+      },
+      "value": [
+        {
+          "label": "Slider3",
+          "type": "slider",
+          "settings": {
+              "min":0,
+              "max":1,
+              "step":0.01
+          },
+          "value": 0.5
+        },{
+          "label": "Slider4",
+          "type": "slider",
+          "settings": {
+              "min":0,
+              "max":2,
+              "step":0.01
+          },
+          "value": 1.5
+        }
+      ]
+    },{
+      "label": "OSC Test",
+      "type": "sine",
+      "settings": [1,5,0.1,0,1,0.2],
+      "value": [0.5,0.3]
+    }
+  ]
+},{
+  "type" : "panel",
+  "label": "Some Other Panel",
+  "settings": {
+    "flow": "vertical"
+  },
+  "value": [
+    {
+      "label": "Slider A",
+      "type": "slider",
+      "settings": {
+          "min":0,
+          "max":1,
+          "step":0.01
+      },
+      "value": 0.5
+    },{
+      "label": "Point Test",
+      "type": "point",
+      "settings": [1,5,0.1,-1,1,0.2],
+      "value": [0.5,0.3]
+    },{
+      "label": "Knob A",
+      "type": "knob",
+      "settings": {
+          "min":0,
+          "max":1,
+          "step":0.01
+      },
+      "value": 0.5
+    },{
+      "label": "Ramp",
+      "type": "color_ramp",
+      "settings": {},
+      "value": [0.2,0.3,0.4,1,1,1]
+    }
+  ]
+},{
+    "type" : "panel",
+    "label": "Another One",
+    "settings": {
+      "flow": "vertical"
+    },
+    "value": [
+      {
+        "label": "Options A",
+        "type": "select",
+        "settings": ["Option 1", "Option 2", "Option 3"],
+        "value": 0
+      }
+    ]
+}]
