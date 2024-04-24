@@ -21,7 +21,7 @@ const testData = require('./UiUi.testdata.b.json');
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <UiUiExList/>,
+    element: <UiUiExList><UiUi.Canvas url="/intro.frag.glsl" /></UiUiExList>,
   },
   {
     path: "/from-file",

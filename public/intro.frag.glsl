@@ -5,10 +5,10 @@ precision highp float;
 #define M_PI2 6.2831853071795864769252867675590
 
 /**
- * @uiui:panel Iterations [ iterations, highFiImpact ]
- * @uiui:panel Main [ tickness, Iterations, zoom ]
- * @uiui:panel Shape [ shape, cohesion ]
- * @uiui:panel HighFreq [ highFBase, highFOsc ]
+ * @--//--uiui:panel Iterations [ iterations, highFiImpact ]
+ * @--//--uiui:panel Main [ tickness, Iterations, zoom ]
+ * @--//--uiui:panel Shape [ shape, cohesion ]
+ * @--//--uiui:panel HighFreq [ highFBase, highFOsc ]
 **/
 
 uniform vec2 u_resolution;
@@ -24,15 +24,15 @@ vec3 getRamp(in float p) {
         * .5;
 }
 
-float zoom = .7; // @uiui:slider Zoom  (.1, 1.,  .1)
-float tickness = .5; // @uiui:slider Tickness (0., 3., .01)
-float iterations = 100.; // @uiui:slider Amount (10., 200., 1.)
-float highFOsc[2] = float[2](.1, .1); // @uiui:sine OSC (.3, 1., .01, 0.1, 2., .01)
-float highFiImpact = .2; // @uiui:slider Impact on HF (0., 1., .01)
-float highFBase = .1; // @uiui:slider Base (0.1, 5., .01)
+float zoom = .8; // @--//--uiui:slider Zoom  (.1, 1.,  .1)
+float tickness = 1.; // @--//--uiui:slider Tickness (0., 3., .01)
+float iterations = 80.; // @--//--uiui:slider Amount (10., 200., 1.)
+float highFOsc[2] = float[2](.3, .1); // @--//--uiui:sine OSC (.3, 1., .01, 0.1, 2., .01)
+float highFiImpact = .0; // @--//--uiui:slider Impact on HF (0., 1., .01)
+float highFBase = .75; // @--//--uiui:slider Base (0.1, 5., .01)
 
-float shape[2] = float[2](3.5, 3.5); // @uiui:point Multiplier (.5, 5., .5, .5, 5., .5)
-float cohesion = .1; // @uiui:slider Cohesion (0.1, .5, .01)
+float shape[2] = float[2](0.5, 2.); // @--//--uiui:point Multiplier (.5, 5., .5, .5, 5., .5)
+float cohesion = .2; // @--//--uiui:slider Cohesion (0.1, .5, .01)
 void main()
 {
     float hFB = highFBase * highFBase;
