@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import { BackWrapper } from './BackWrapper';
+import { UiUiExList } from './UiUiExList';
 
 
 import { UiUi } from '@opqa/uiui';
@@ -18,16 +20,20 @@ import {
 const testData = require('./UiUi.testdata.b.json');
 const router = createBrowserRouter([
   {
+    path: "/",
+    element: <UiUiExList/>,
+  },
+  {
     path: "/from-file",
-    element: <UiUi.Root data={testData}/>,
+    element: <BackWrapper><UiUi.Root data={testData}/></BackWrapper>,
   },
   {
     path: "/glsl/tiles",
-    element: <UiUi.Canvas url="/shader.frag.glsl" />,
+    element: <BackWrapper><UiUi.Canvas url="/shader.frag.glsl" /></BackWrapper>,
   },
   {
-    path: "/glsl/threads",
-    element: <UiUi.Canvas url="/threads.frag.glsl" />,
+    path: "/glsl/thread",
+    element: <BackWrapper><UiUi.Canvas url="/threads.frag.glsl" /></BackWrapper>
   },
 ]);
 
