@@ -1,6 +1,6 @@
 {
-  "name": "UiUi Examples & Showcase",
-  "version": "0.1.1",
+  "name": "UiUiExamples",
+  "version": "0.1.2",
   "private": true,
   "dependencies": {
     "@opqa/uiui": "^0.1.4",
