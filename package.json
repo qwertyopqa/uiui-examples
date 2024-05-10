@@ -1,9 +1,9 @@
 {
-  "name": "example",
-  "version": "0.1.0",
+  "name": "UiUi Examples & Showcase",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
-    "@opqa/uiui": "^0.1.1",
+    "@opqa/uiui": "^0.1.4",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -17,7 +17,6 @@
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
     "typescript": "^4.4.2",
-    "uiui": "link:..",
     "web-vitals": "^2.1.0"
   },
   "scripts": {

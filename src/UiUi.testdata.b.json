@@ -1,5 +1,5 @@
 [{
-  "type" : "panel",
+  "type" : "Panel",
   "label": "Global",
   "settings": {
     "flow": "vertical"
@@ -7,7 +7,7 @@
   "value": [
     {
       "label": "Slider1",
-      "type": "slider",
+      "type": "Slider",
       "settings": {
         "min":0,
         "max":1,
@@ -16,7 +16,7 @@
       "value": 0.5
     },{
       "label": "Slider2",
-      "type": "slider",
+      "type": "Slider",
       "settings": {
         "min":0,
         "max":2,
@@ -24,7 +24,7 @@
       },
       "value": 1.5
     },{
-      "type": "panel",
+      "type": "Panel",
       "label": "Inner Panel",
       "settings": {
         "flow": "vertical"
@@ -32,7 +32,7 @@
       "value": [
         {
           "label": "Slider3",
-          "type": "slider",
+          "type": "Slider",
           "settings": {
               "min":0,
               "max":1,
@@ -41,7 +41,7 @@
           "value": 0.5
         },{
           "label": "Slider4",
-          "type": "slider",
+          "type": "Slider",
           "settings": {
               "min":0,
               "max":2,
@@ -52,13 +52,13 @@
       ]
     },{
       "label": "OSC Test",
-      "type": "sine",
+      "type": "Sine",
       "settings": [1,5,0.1,0,1,0.2],
       "value": [0.5,0.3]
     }
   ]
 },{
-  "type" : "panel",
+  "type" : "Panel",
   "label": "Some Other Panel",
   "settings": {
     "flow": "vertical"
@@ -66,7 +66,7 @@
   "value": [
     {
       "label": "Slider A",
-      "type": "slider",
+      "type": "Slider",
       "settings": {
           "min":0,
           "max":1,
@@ -75,7 +75,7 @@
       "value": 0.5
     },{
       "label": "Point Test",
-      "type": "point",
+      "type": "Point",
       "settings": [1,5,0.1,-1,1,0.2],
       "value": [0.5,0.3]
     },{
@@ -89,13 +89,13 @@
       "value": 0.5
     },{
       "label": "Ramp",
-      "type": "color_ramp",
+      "type": "ColorRamp",
       "settings": {},
       "value": [0.2,0.3,0.4,1,1,1]
     }
   ]
 },{
-    "type" : "panel",
+    "type" : "Panel",
     "label": "Another One",
     "settings": {
       "flow": "vertical"
@@ -103,7 +103,7 @@
     "value": [
       {
         "label": "Options A",
-        "type": "select",
+        "type": "Select",
         "settings": ["Option 1", "Option 2", "Option 3"],
         "value": 0
       }

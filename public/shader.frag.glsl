@@ -9,26 +9,26 @@ uniform float u_time;
 out vec4 fragColor;
 
 /**
- * @uiui:panel Tiles    [ t_number,      t_zoom,     rotation    ]
- * @uiui:panel Main     [ divs,          iterations, zoom, Tiles ]
- * @uiui:panel Color >  [ ramp ]
- * @uiui:panel OSC_A    [ lfo1_iter,   oscA_lfo       ]
- * @uiui:panel OSC_B    [ lfo2_iter,   oscB_lfo       ]
+ * @uiui:Panel Tiles    [ t_number,      t_zoom,     rotation    ]
+ * @uiui:Panel Main     [ divs,          iterations, zoom, Tiles ]
+ * @uiui:Panel Color >  [ ramp ]
+ * @uiui:Panel OSC_A    [ lfo1_iter,   oscA_lfo       ]
+ * @uiui:Panel OSC_B    [ lfo2_iter,   oscB_lfo       ]
 **/
 
-float t_number = .2;// @uiui:slider Amount       (.1, 3., .01)
-float t_zoom = 1.;  // @uiui:slider Zoom  (.5, 3.,  .1)
-float zoom = 1.;    // @uiui:slider Zoom (.1, 2., .01)
-int divs = 1;       // @uiui:slider Divisions   ( 1, 16,   1)
-int iterations = 8; // @uiui:slider Iterations  ( 1, 20,   1)
-float rotation = .0;// @uiui:slider Rotation    (-1,  1,  .1)
+float t_number = .2;// @uiui:Slider Amount       (.1, 3., .01)
+float t_zoom = 1.;  // @uiui:Slider Zoom  (.5, 3.,  .1)
+float zoom = 1.;    // @uiui:Slider Zoom (.1, 2., .01)
+int divs = 1;       // @uiui:Slider Divisions   ( 1, 16,   1)
+int iterations = 8; // @uiui:Slider Iterations  ( 1, 20,   1)
+float rotation = .0;// @uiui:Slider Rotation    (-1,  1,  .1)
 
 struct ColRamp {
     vec3 p;
     vec3 i;
 };
 // vv
-float ramp[6] = float[6]( .1, .2, .3, 1., 1., 1.); // @uiui:color_ramp Ramping ()
+float ramp[6] = float[6]( .1, .2, .3, 1., 1., 1.); // @uiui:ColorRamp Ramping ()
 
 // @-uiui:panel Tiles
 struct Tiles {
@@ -68,8 +68,8 @@ vec3 getRamp(float p) {
 }
 
 
-float oscA_lfo[2] = float[2](.25, .2); // @uiui:sine SINE (0., .5, .01, 0., 0.5, .01)
-float lfo1_iter = -.7;  // @uiui:slider DECAY (-2, 2., .01 )
+float oscA_lfo[2] = float[2](.25, .2); // @uiui:Sine SINE (0., .5, .01, 0., 0.5, .01)
+float lfo1_iter = -.7;  // @uiui:Slider DECAY (-2, 2., .01 )
 vec2 oscA_o = vec2(.3,.1);
 vec2 oscA_o_lfo1 = vec2(.2 , .2);
 float LFO1(float s) {
@@ -83,8 +83,8 @@ void oscA(inout vec2 p, inout float a, float s ) {
     p = vec2(cos(a), sin(a)) * length(p);
 }
 
-float oscB_lfo[2] = float[2](.25, .2); // @uiui:sine SINE (0., .5, .01, 0., 0.5, .01)
-float lfo2_iter = .5; // @uiui:slider DECAY (-2, 2., .01 )
+float oscB_lfo[2] = float[2](.25, .2); // @uiui:Sine SINE (0., .5, .01, 0., 0.5, .01)
+float lfo2_iter = .5; // @uiui:Slider DECAY (-2, 2., .01 )
 
 vec2 oscB_o = vec2(.6,.0);
 float oscB_o_iter = 1.2;
