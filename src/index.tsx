@@ -11,11 +11,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 //import { UiUiPoint } from './ui/Point';
-// import sliderStyles from './ui/slider.module.scss';
-// UiUi.Styles.register('Slider', sliderStyles);
-// UiUi.Config.enable([UiUiPoint]);
 
-// UiUi.GlslCanvas.processShaderCode(code);
+import { initTheme } from './theme/example';
+initTheme();
 
 const testData = require('./UiUi.testdata.b.json');
 const router = createBrowserRouter([
@@ -29,7 +27,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/glsl/tiles",
-    element: <BackWrapper><UiUi.Canvas url="/shader.frag.glsl" /></BackWrapper>,
+    element: <BackWrapper><UiUi.Canvas url="/shader.frag.glsl" theme="example"/></BackWrapper>,
   },
   {
     path: "/glsl/thread",
