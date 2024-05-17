@@ -9,6 +9,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { initTheme } from './theme/example';
+import testData from './UiUi.testdata.b.json';
 import * as Sentry from "@sentry/react";
 
 Sentry.init({
@@ -29,7 +30,6 @@ Sentry.init({
 
 initTheme();
 
-const testData = require('./UiUi.testdata.b.json');
 const router = createBrowserRouter([
   {
     path: "/",

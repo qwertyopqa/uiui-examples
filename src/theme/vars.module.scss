@@ -1,4 +1,6 @@
+@import '../../node_modules/@opqa/uiui/dist/scss/UiUiBaseTheme.scss';
 .vars {
+  @include UiUiBaseVars;
   --u1: 1.5pt;
   --label-color: #222;
   --label-size:  var(--u4);
