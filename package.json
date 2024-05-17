@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@opqa/uiui": "^0.1.4",
+    "@sentry/cli": "^2.31.2",
+    "@sentry/react": "^8.0.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -23,7 +25,8 @@
     "start": "react-scripts start",
     "build": "CI=false react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org goncalo-tavares --project uiui-examples ./build && sentry-cli sourcemaps upload --org goncalo-tavares --project uiui-examples ./build"
   },
   "eslintConfig": {
     "extends": [
